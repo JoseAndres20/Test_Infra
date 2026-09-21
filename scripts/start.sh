@@ -32,7 +32,7 @@ echo "┌───────────────────────�
 echo "│  ✅  Lab levantado                          │"
 echo "│                                            │"
 echo "│  🌐  http://localhost:8080                  │"
-echo "│  🌐  ssh guest@localhost:2222 123456        │"
+echo "│  🌐  ssh guest@localhost -p 2222           │"
 echo "│                                            │"
 echo "│  Comandos útiles:                          │"
 echo "│    docker compose logs -f   → ver logs     │"

@@ -5,8 +5,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     nginx \
     && rm -rf /var/lib/apt/lists/*
 
-# Banner SSH
+# Banner SSH y archivos del sistema
 COPY banner.txt /etc/ssh/banner.txt
+COPY guest_files/ /home/guest/
 
 # Configurar SSH: permitir root + password + mostrar banner
 RUN mkdir -p /var/run/sshd && \
