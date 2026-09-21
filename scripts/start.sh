@@ -4,7 +4,7 @@
 # ─────────────────────────────────────────────────────────────
 
 set -e
-cd "$(dirname "$0")"   # siempre corre desde la raíz del repo
+cd "$(dirname "$0")/.."   # Navegar siempre a la raíz del repositorio
 
 # ── 1. Verificar Docker ───────────────────────────────────────
 if ! command -v docker &>/dev/null; then
