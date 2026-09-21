@@ -18,7 +18,7 @@ Thumbs.db
 *.key
 
 # Logs & Temporary files
-*.log
+
 logs/
 tmp/
 *.bak

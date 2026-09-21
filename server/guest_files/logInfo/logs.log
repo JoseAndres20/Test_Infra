@@ -1,0 +1,10 @@
+1. May 10 14:00:01 server sshd[1201]: Server listening on 0.0.0.0 port 22.
+2. May 10 14:02:11 server sshd[1205]: Accepted password for root from 192.168.1.50 port 54210 ssh2
+3. May 10 14:02:12 server sshd[1205]: pam_unix(sshd:session): session opened for user root by (uid=0)
+4. May 10 14:05:30 server sshd[1210]: Received disconnect from 192.168.1.50 port 54210:11: disconnected by user
+5. May 10 14:05:30 server sshd[1205]: pam_unix(sshd:session): session closed for user root
+6. May 10 14:10:02 server sshd[1218]: Connection from 10.0.0.85 port 41102 on 10.0.0.10 port 22
+7. May 10 14:10:04 server sshd[1218]: Invalid user admin_test from 10.0.0.85 port 41102
+8. May 10 14:10:06 server sshd[1218]: Failed password for invalid user admin_test from 10.0.0.85 port 41102 ssh2
+9. May 10 14:10:07 server sshd[1218]: Connection closed by invalid user admin_test 10.0.0.85 port 41102 [preauth]
+10. May 10 14:12:00 server sshd[1222]: Accepted publickey for fairwellito from 192.168.1.10 port 58912 ssh2
