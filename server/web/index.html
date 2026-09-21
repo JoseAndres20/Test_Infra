@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: #fff;
+      padding: 32px 28px;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      font-size: .85rem;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 7px 10px;
+      border: 1px solid #bbb;
+      font-size: .9rem;
+      margin-bottom: 14px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 8px;
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      font-size: .9rem;
+      cursor: pointer;
+    }
+
+    button:hover { background: #1558b0; }
+
+    .error {
+      display: none;
+      color: red;
+      font-size: .8rem;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Iniciar sesión</h2>
+
+  <p class="error" id="err">Usuario o contraseña incorrectos.</p>
+
+  <form onsubmit="login(event)">
+    <label>Usuario</label>
+    <input type="text" id="u" placeholder="usuario" />
+
+    <label>Contraseña</label>
+    <input type="password" id="p" placeholder="contraseña" />
+
+    <button type="submit">Entrar</button>
+  </form>
+</div>
+
+<script>
+  const users = { admin: 'Admin1234', guest: '123456', root: 'toor' };
+
+  function login(e) {
+    e.preventDefault();
+    const u = document.getElementById('u').value;
+    const p = document.getElementById('p').value;
+    const err = document.getElementById('err');
+
+    if (users[u] && users[u] === p) {
+      alert('Bienvenido, ' + u + '!');
+    } else {
+      err.style.display = 'block';
+      document.getElementById('p').value = '';
+    }
+  }
+</script>
+
+</body>
+</html>

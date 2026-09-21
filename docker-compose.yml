@@ -1,0 +1,8 @@
+services:
+  server:
+    build: ./server
+    container_name: victim-server
+    ports:
+      - "8080:80"    # Web
+      - "2222:22"    # SSH
+    restart: unless-stopped

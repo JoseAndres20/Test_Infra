@@ -1,0 +1,28 @@
+# Operating System
+.DS_Store
+Thumbs.db
+*~
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs & Temporary files
+*.log
+logs/
+tmp/
+*.bak
+
+# Docker data / volumes (if local persistent volumes are created)
+.dockerdata/
+data/
