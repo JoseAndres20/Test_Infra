@@ -39,7 +39,7 @@ RUN echo "root:toor" | chpasswd && \
 
 # Web
 COPY web/index.html /var/www/html/index.html
-COPY web/.env /var/www/html/.env
+COPY web/.env.example /var/www/html/.env.example
 
 # Habilitar servicios con systemd
 RUN mkdir -p /etc/systemd/system/multi-user.target.wants && \
