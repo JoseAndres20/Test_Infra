@@ -12,5 +12,7 @@
 [2026-05-10 14:35:00] INFO: Unauthorized Python script detected: /home/guest23/exfil.py
 [2026-05-10 14:35:01] INFO: Reverse shell established to 203.0.113.50:4444
 [2026-05-10 14:35:02] INFO: Reading system files: /etc/passwd, /etc/shadow, /home/guest/.bash_history
+[2026-05-10 14:35:02] INFO: Reading system files: cat Intentalo.txt, /etc/shadow, /var/www/html/.env, /var/www/html/image.png
+[2026-05-10 14:35:02] INFO: Collected credentials and sensitive data
 [2026-05-10 14:35:03] INFO: Sending collected data to remote server via HTTPS POST
 [2026-05-10 14:35:04] INFO: Exfiltration complete — 3 files sent to attacker

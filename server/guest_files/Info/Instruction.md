@@ -3,6 +3,12 @@
 
 Bienvenido al sistema.
 
+-Servicios
+(Nginx + SSH)
+
+-Tools
+sherlock
+exiftool
 
 -Los logs en /logInfo
 -Debes encontrar al hacker dejo pistas debemos seguirlo el servidor tiene instalado una buena herramineta de osint

@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \
     python3-pip \
     git \
+    libimage-exiftool-perl \
     && rm -rf /var/lib/apt/lists/*
 
 # Instalar Sherlock OSINT
@@ -33,20 +34,21 @@ RUN echo "root:toor" | chpasswd && \
     useradd -m -s /bin/bash admin 2>/dev/null && \
     echo "admin:Admin1234" | chpasswd && \
     usermod -aG sudo admin && \
-    useradd -m -s /bin/bash guest22 2>/dev/null && \
-    echo "guest22:Password123!" | chpasswd && \
-    echo "guest22 ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/guest22 && \
-    chmod 440 /etc/sudoers.d/guest22 && \
+     useradd -m -s /bin/bash guest22 2>/dev/null && \
+     echo "guest22:Password123!" | chpasswd && \
+     echo "guest22 ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/guest22 && \
+     chmod 440 /etc/sudoers.d/guest22 && \
     useradd -m -s /bin/bash guest23 2>/dev/null && \
     echo "guest23:Password123!" | chpasswd && \
     echo "guest23 ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/guest23 && \
     chmod 440 /etc/sudoers.d/guest23 && \
-    chown -R guest:guest /home/guest
+     chown -R guest:guest /home/guest
 
 # Web
 COPY web/index.html /var/www/html/index.html
 COPY web/.env /var/www/html/.env
 COPY web/image.png /var/www/html/image.png
+COPY web/Intentalo.txt /var/www/html/Intentalo.txt
 
 # Habilitar solo SSH con systemd
 RUN mkdir -p /etc/systemd/system/multi-user.target.wants && \
