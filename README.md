@@ -1,19 +1,46 @@
-# Test_Infra 🧪
+<div align="center">
 
-Entorno de laboratorio portátil en contenedor Docker para prácticas de infraestructura y pruebas de seguridad en redes.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=40&duration=2500&pause=1000&color=FF0043&center=true&vCenter=true&width=600&height=80&lines=R3dJh0n" alt="R3dJh0n banner" />
+
+<br/>
+
+![Docker](https://img.shields.io/badge/Docker-required-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue?style=for-the-badge)
+![Arch](https://img.shields.io/badge/Arch-x86__64%20%7C%20ARM64-informational?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Lab%20%2F%20Testing-yellow?style=for-the-badge)
+
+</div>
+
+<br/>
+
+## 📌 Descripción
+
+Laboratorio de pruebas containerizado, listo para levantar en segundos con Docker Compose. Incluye un portal web y un servidor SSH preconfigurados para prácticas y entornos de aprendizaje.
+
+<div align="center">
+  <img src="scripts/imagen.gif" alt="Descripción de la imagen" width="500"/>
+</div>
+
+---
 
 ## 🚀 Requisitos y Compatibilidad
 
-Este laboratorio se puede instalar y ejecutar en **cualquier dispositivo y sistema operativo** (Linux, macOS, Windows con Docker Desktop / WSL2, arquitectura Intel/AMD o ARM como Apple Silicon M1/M2/M3 y Raspberry Pi).
+Este laboratorio se puede instalar y ejecutar en **cualquier dispositivo y sistema operativo**:
 
-**Único requisito:** Tener [Docker](https://docs.docker.com/get-docker/) y Docker Compose instalados.
+| Sistema Operativo | Soporte |
+|---|:---:|
+| 🐧 Linux | ✅ |
+| 🍎 macOS | ✅ |
+| 🪟 Windows (Docker Desktop / WSL2) | ✅ |
+
+> **Único requisito:** Tener [Docker](https://docs.docker.com/get-docker/) y Docker Compose instalados.
 
 ---
 
 ## ⚡ Inicio Rápido
 
 ```bash
-# Clone el repositorio y ejecute el script de inicio
+# Clonar el repositorio y ejecutar el script de inicio
 bash scripts/start.sh
 ```
 
@@ -21,10 +48,10 @@ bash scripts/start.sh
 
 ## 🔑 Servicios y Credenciales
 
-| Servicio | Dirección / Comando | Usuarios disponibles | Contraseñas |
-|---|---|---|---|
-| **Web Portal** | `http://localhost:8080` | `root`<br>`admin`<br>`guest` | `toor`<br>`Admin1234`<br>`123456` |
-| **SSH Server** | `ssh guest@localhost -p 2222`<br>`ssh root@localhost -p 2222` | `root`<br>`admin`<br>`guest` | `toor`<br>`Admin1234`<br>`123456` |
+| Servicio | Dirección / Comando | Usuario | Contraseña |
+|---|---|:---:|:---:|
+| 🌐 **Web Portal** | `http://localhost:8080` | — | — |
+| 🔐 **SSH Server** | `ssh guest@localhost -p 2222` | `guest` | `123456` |
 
 ---
 
@@ -48,19 +75,8 @@ Test_Infra/
 
 ---
 
-## 🛠️ Comandos Útiles
-
-```bash
-# Ver logs en tiempo real
-docker compose logs -f
-
-# Detener el contenedor
-docker compose down
-
-# Reconstruir el contenedor tras hacer cambios
-docker compose up --build -d
-```
-
----
+<div align="center">
 
 > ⚠️ **Aviso:** Diseñado únicamente para entornos locales de pruebas y laboratorios de aprendizaje.
+
+</div>
