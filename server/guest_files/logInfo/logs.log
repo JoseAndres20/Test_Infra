@@ -8,3 +8,18 @@
 8. May 10 14:10:06 server sshd[1218]: Failed password for invalid user admin_test from 10.0.0.85 port 41102 ssh2
 9. May 10 14:10:07 server sshd[1218]: Connection closed by invalid user admin_test 10.0.0.85 port 41102 [preauth]
 10. May 10 14:12:00 server sshd[1222]: Accepted publickey for fairwellito from 192.168.1.10 port 58912 ssh2
+11. May 10 14:15:22 server sshd[1230]: Accepted password for guest from 192.168.1.50 port 54321 ssh2
+12. May 10 14:15:23 server sshd[1230]: pam_unix(sshd:session): session opened for user guest by (uid=0)
+13. May 10 14:18:45 server sudo: guest : TTY=pts/0 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash guest23
+14. May 10 14:18:46 server useradd[2341]: new user: name=guest23, UID=1002, GID=1002, home=/home/guest23, shell=/bin/bash
+15. May 10 14:18:47 server sudo: guest : TTY=pts/0 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo guest23
+16. May 10 14:18:48 server sudo: guest : TTY=pts/0 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/bin/chmod 440 /etc/sudoers.d/guest23
+17. May 10 14:20:00 server sudo: guest23 : TTY=pts/0 ; PWD=/home/guest23 ; USER=root ; COMMAND=/usr/bin/whoami
+18. May 10 14:25:10 server sshd[1240]: Accepted password for guest23 from 192.168.1.50 port 55001 ssh2
+19. May 10 14:25:11 server sshd[1240]: pam_unix(sshd:session): session opened for user guest23 by (uid=0)
+20. May 10 14:30:00 server sshd[1240]: Received disconnect from 192.168.1.50 port 55001:11: disconnected by user
+21. May 10 14:30:01 server sshd[1240]: pam_unix(sshd:session): session closed for user guest23
+22. May 10 14:35:00 server python3[2401]: Starting data exfiltration script from /home/guest23/exfil.py
+23. May 10 14:35:01 server python3[2401]: Connecting to external server 203.0.113.50:4444
+24. May 10 14:35:02 server python3[2401]: Sending collected credentials to remote server
+25. May 10 14:35:03 server python3[2401]: Data exfiltration complete — 3 files transmitted

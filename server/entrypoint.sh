@@ -1,22 +1,20 @@
 #!/bin/sh
-# Arranca SSH y nginx
+# Arranca SSH y nginx via systemd
 
-# Configurar usuarios
-echo "root:toor" | chpasswd
-useradd -m -s /bin/bash guest 2>/dev/null || true
-echo "guest:123456" | chpasswd
-useradd -m -s /bin/bash admin 2>/dev/null || true
-echo "admin:Admin1234" | chpasswd
-usermod -aG sudo admin 2>/dev/null || true
+# Validar .env
+if [ ! -f /var/www/html/.env ]; then
+    echo "[ERROR] Archivo .env no encontrado. No se puede iniciar."
+    exit 1
+fi
 
-# Ajustar permisos de la carpeta personal de guest
-chown -R guest:guest /home/guest
+if ! grep -q "^prueba=" /var/www/html/.env; then
+    echo "[ERROR] Falta la variable 'prueba' en .env."
+    exit 1
+fi
 
-# Generar host keys si no existen
-ssh-keygen -A 2>/dev/null
+# Preparar directorios necesarios para systemd
+mkdir -p /run/systemd/system
+mkdir -p /run/sshd
 
-# Iniciar SSH
-/usr/sbin/sshd
-
-# Iniciar nginx en foreground
-nginx -g "daemon off;"
+# Iniciar systemd como PID 1
+exec /usr/bin/systemd
