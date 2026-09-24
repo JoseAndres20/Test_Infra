@@ -2,12 +2,12 @@
 # Arranca SSH y nginx via systemd
 
 # Validar .env
-if [ ! -f /var/www/html/.env.example ]; then
+if [ ! -f /var/www/html/.env ]; then
     echo "[ERROR] Archivo .env no encontrado. No se puede iniciar."
     exit 1
 fi
 
-if ! grep -q "^prueba=" /var/www/html/.env.example; then
+if ! grep -q "^prueba=" /var/www/html/.env; then
     echo "[ERROR] Falta la variable 'prueba' en .env."
     exit 1
 fi

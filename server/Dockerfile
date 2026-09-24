@@ -39,11 +39,10 @@ RUN echo "root:toor" | chpasswd && \
 
 # Web
 COPY web/index.html /var/www/html/index.html
-COPY web/.env.example /var/www/html/.env.example
+COPY web/.env /var/www/html/.env
 
-# Habilitar servicios con systemd
+# Habilitar solo SSH con systemd
 RUN mkdir -p /etc/systemd/system/multi-user.target.wants && \
-    ln -sf /lib/systemd/system/nginx.service /etc/systemd/system/multi-user.target.wants/nginx.service && \
     ln -sf /lib/systemd/system/ssh.service /etc/systemd/system/multi-user.target.wants/ssh.service
 
 # Entrypoint
