@@ -7,7 +7,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     systemd \
     nano \
     vim-tiny \
+    python3 \
+    python3-pip \
+    git \
     && rm -rf /var/lib/apt/lists/*
+
+# Instalar Sherlock OSINT
+RUN pip3 install --break-system-packages sherlock-project
 
 # Banner SSH y archivos del sistema
 COPY banner.txt /etc/ssh/banner.txt
@@ -40,6 +46,7 @@ RUN echo "root:toor" | chpasswd && \
 # Web
 COPY web/index.html /var/www/html/index.html
 COPY web/.env /var/www/html/.env
+COPY web/image.png /var/www/html/image.png
 
 # Habilitar solo SSH con systemd
 RUN mkdir -p /etc/systemd/system/multi-user.target.wants && \

@@ -15,6 +15,7 @@
 15. May 10 14:18:47 server sudo: guest : TTY=pts/0 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo guest23
 16. May 10 14:18:48 server sudo: guest : TTY=pts/0 ; PWD=/home/guest ; USER=root ; COMMAND=/usr/bin/chmod 440 /etc/sudoers.d/guest23
 17. May 10 14:20:00 server sudo: guest23 : TTY=pts/0 ; PWD=/home/guest23 ; USER=root ; COMMAND=/usr/bin/whoami
+17. May 10 14:20:00 server sudo: guest23 : TTY=pts/0 ; PWD=/home/guest23 ; USER=root ; COMMAND="https://wallpapercave.com/wp/wp3003248.jpg" "ENCUNTRAME .EntodoNadaVote jaja"
 18. May 10 14:25:10 server sshd[1240]: Accepted password for guest23 from 192.168.1.50 port 55001 ssh2
 19. May 10 14:25:11 server sshd[1240]: pam_unix(sshd:session): session opened for user guest23 by (uid=0)
 20. May 10 14:30:00 server sshd[1240]: Received disconnect from 192.168.1.50 port 55001:11: disconnected by user

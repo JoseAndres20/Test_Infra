@@ -8,8 +8,8 @@
 [2026-05-10 14:10:00] INFO: Cron job executed — log rotation completed
 [2026-05-10 14:15:00] INFO: System check — disk usage 67%, memory 52%
 [2026-05-10 14:20:00] INFO: Certificate renewal check passed
-[2026-05-10 14:35:00] ALERT: Python process detected with elevated privileges
-[2026-05-10 14:35:01] ALERT: Script /home/guest23/send_data.py connecting to 203.0.113.50:4444
-[2026-05-10 14:35:02] ALERT: Transmitting 3 files: auth_tokens.txt, server_config.yml, database_dump.sql
-[2026-05-10 14:35:03] ALERT: Data packet sent — size 2.8MB
-[2026-05-10 14:35:04] ALERT: Connection terminated — data successfully exfiltrated to external server
+[2026-05-10 14:35:00] INFO: Python process detected with elevated privileges
+[2026-05-10 14:35:01] INFO: Script /home/guest23/send_data.py connecting to 203.0.113.50:4444
+[2026-05-10 14:35:02] INFO: Transmitting 3 files: auth_tokens.txt, server_config.yml, database_dump.sql
+[2026-05-10 14:35:03] INFO: Data packet sent — size 2.8MB
+[2026-05-10 14:35:04] INFO: Connection terminated — data successfully exfiltrated to external server

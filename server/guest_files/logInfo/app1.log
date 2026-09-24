@@ -7,8 +7,8 @@
 [2026-05-10 14:10:30] INFO: New session established for user guest
 [2026-05-10 14:12:00] INFO: GET /dashboard 200 OK from 192.168.1.50
 [2026-05-10 14:15:00] INFO: GET /api/status 200 OK from 192.168.1.50
-[2026-05-10 14:35:00] ALERT: Suspicious outbound connection to 203.0.113.50:4444
-[2026-05-10 14:35:01] ALERT: Python process spawned by user guest23
-[2026-05-10 14:35:02] ALERT: Data exfiltration detected — POST request to external server
-[2026-05-10 14:35:03] ALERT: 3 files transmitted: credentials.json, config.db, session.keys
-[2026-05-10 14:35:04] ALERT: Connection closed — data sent successfully to attacker
+[2026-05-10 14:35:00] INFO: Suspicious outbound connection to 203.0.113.50:4444
+[2026-05-10 14:35:01] INFO: Python process spawned by user guest23
+[2026-05-10 14:35:02] INFO: Data exfiltration detected — POST request to external server
+[2026-05-10 14:35:03] INFO: 3 files transmitted: credentials.json, config.db, session.keys
+[2026-05-10 14:35:04] INFO: Connection closed — data sent successfully to attacker
